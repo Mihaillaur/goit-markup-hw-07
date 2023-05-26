@@ -59,7 +59,7 @@
         </address>
       </div>
       <!-- ==========MOBILE_MENU========== -->
-      <div class="mobile-menu js-menu-container"> 
+      <div class="mobile-menu js-menu-container">
         <div class="mobile-menu-container">
           <button class="mobile-menu-close-button js-close-menu">
             <svg class="mobile-menu-close-icon">
@@ -213,13 +213,29 @@
 
           <ul class="products-list list">
             <li class="doing">
-              <img src="./images/img1.jpg" alt="pc" width="360" />
+              <img
+                srcset="./images/img1_@1x.jpg 1x, ./images/img1_@1x.jpg 2x"
+                src="./images/img1_@1x.jpg"
+                alt="pc"
+                width="360"
+                loading="lazy" />
+            </li>
+
+            <li class="doing">
+              <img
+                srcset="./images/img2_@1x.jpg 1x, ./images/img2_@1x.jpg 2x"
+                src="./images/img2_@1x.jpg"
+                alt="smartfone"
+                width="360"
+                loading="lazy" />
             </li>
             <li class="doing">
-              <img src="./images/img2.jpg" alt="smartfone" width="360" />
-            </li>
-            <li class="doing">
-              <img src="./images/img3.jpg" alt="synchronization" width="360" />
+              <img
+                srcset="./images/img3_@1x.jpg 1x, ./images/img3_@1x.jpg 2x"
+                src="./images/img3_@1x.jpg"
+                alt="synchronization"
+                width="360"
+                loading="lazy" />
             </li>
           </ul>
         </div>
@@ -231,11 +247,17 @@
           <ul class="team-list list">
             <li class="employee">
               <img
-                class="image"
-                src="./images/img.jpg"
+                class="team-avatar"
+                srcset="
+                  ./images/img-emp1_@1x.jpg 1x,
+                  ./images/img-emp1_@2x.jpg 2x
+                "
+                src="./images/img-emp1_@1x.jpg"
                 alt="Product Designer"
                 width="264"
-                height="260" />
+                height="260"
+                loading="lazy" />
+
               <div class="employee-card">
                 <h3 class="name-employee">Mark Guerrero</h3>
                 <p class="job-title">Product Designer</p>
@@ -273,10 +295,17 @@
             </li>
             <li class="employee">
               <img
-                src="./images/img(1).jpg"
+                class="team-avatar"
+                srcset="
+                  ./images/img-emp2_@1x.jpg 1x,
+                  ./images/img-emp2_@2x.jpg 2x
+                "
+                src="./images/img-emp2_@1x.jpg"
                 alt="Frontend Developer"
                 width="264"
-                height="260" />
+                height="260"
+                loading="lazy" />
+
               <div class="employee-card">
                 <h3 class="name-employee">Tom Ford</h3>
                 <p class="job-title">Frontend Developer</p>
@@ -314,10 +343,17 @@
             </li>
             <li class="employee">
               <img
-                src="./images/img(2).jpg"
+                class="team-avatar"
+                srcset="
+                  ./images/img-emp3_@1x.jpg 1x,
+                  ./images/img-emp3_@2x.jpg 2x
+                "
+                src="./images/img-emp3_@1x.jpg"
                 alt="Marketing"
                 width="264"
-                height="260" />
+                height="260"
+                loading="lazy" />
+
               <div class="employee-card">
                 <h3 class="name-employee">Camila Garcia</h3>
                 <p class="job-title">Marketing</p>
@@ -355,10 +391,17 @@
             </li>
             <li class="employee">
               <img
-                src="./images/img(3).jpg"
+                class="team-avatar"
+                srcset="
+                  ./images/img-emp4_@1x.jpg 1x,
+                  ./images/img-emp4_@2x.jpg 2x
+                "
+                src="./images/img-emp4_@1x.jpg"
                 alt="UI Designer"
                 width="264"
-                height="260" />
+                height="260"
+                loading="lazy" />
+
               <div class="employee-card">
                 <h3 class="name-employee">Daniel Wilson</h3>
                 <p class="job-title">UI Designer</p>
@@ -521,9 +564,9 @@
             <use href="./images/icons.svg#close-modal"></use>
           </svg>
         </button>
-        <p class="modal-text">Leave your contacts and we will call you back</p>  
-    <!-- ==========MODAL_FORM==========-->
-    <form class="modal-form">
+        <p class="modal-text">Leave your contacts and we will call you back</p>
+        <!-- ==========MODAL_FORM==========-->
+        <form class="modal-form">
           <label class="modal-form-field">
             <span class="modal-form-descr">Name</span>
             <span class="modal-form-input-wrapper">
@@ -581,9 +624,9 @@
           >
           <button type="submit" class="modal-form-submit">Send</button>
         </form>
-     </div>
-    </div> 
+      </div>
+    </div>
     <script src="./js/mobile-menu.js"></script>
-    <script src="./js/modal.js"></script> 
+    <script src="./js/modal.js"></script>
   </body>
 </html>
