@@ -240,7 +240,6 @@ body {
   height: 100vh;
   z-index: 1000;
   left: 0;
-
   top: 0;
   background-color: var(--primary-light-color);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
@@ -250,6 +249,7 @@ body {
   pointer-events: none;
   transition: opacity var(--transition-dur-and-func);
 }
+
 .js-menu-container.is-open {
   opacity: 1;
   display: block;
@@ -258,11 +258,13 @@ body {
 }
 .mobile-menu-container {
   position: relative;
-  /* min-width: 428px; */
   padding-top: 80px;
   padding-bottom: 40px;
   padding-left: 40px;
   padding-right: 35px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .mobile-menu-close-button {
   position: absolute;
@@ -288,7 +290,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  margin-bottom: 284px;
+  margin-bottom: auto;
 }
 .mobile-menu-link {
   font-weight: 700;
@@ -307,7 +309,8 @@ body {
 .mobile-menu-link:focus {
   color: var(--hover-color);
 }
-.mobile-menu-contacts {
+.mobile-menu-address {
+  font-style: normal;
 }
 .mobile-menu-contacts-link-phone {
   display: block;
@@ -363,14 +366,19 @@ body {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero/bg-img-mob_@1x.png);
+    url(../images/hero/bg-img-mob_@1x.jpg);
 
   /* retina mobile screen */
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
-    (min-resolution: 2dppx) background-image: linear-gradient(to right,  rgba(46, 47, 66, 0.7),
-    rgba(46, 47, 66, 0.7)),
-    url(../images/hero/bg-img-mob_@2x.png);
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/bg-img-mob_@2x.jpg);
+  }
 }
 
 /* Tablet screen */
@@ -381,7 +389,7 @@ body {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/hero/bg-img-tab_@1x.png);
+      url(../images/hero/bg-img-tab_@1x.jpg);
   }
 
   /* retina tablet screen */
@@ -394,30 +402,30 @@ body {
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url(../images/hero/bg-img-tab_@2x.png);
+        url(../images/hero/bg-img-tab_@2x.jpg);
     }
-    /* Desktop screen */
-    @media screen and (min-width: 769px) {
+  }
+  /* Desktop screen */
+  @media screen and (min-width: 769px) {
+    .section-hero {
+      background-image: linear-gradient(
+          to right,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero/bg-img-desc_@1x.jpg);
+    }
+    /* retina desktop screen */
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
       .section-hero {
         background-image: linear-gradient(
             to right,
             rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)
           ),
-          url(../images/hero/bg-img-desc_@1x.png);
-      }
-      /* retina desktop screen */
-      @media (min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-        .section-hero {
-          background-image: linear-gradient(
-              to right,
-              rgba(46, 47, 66, 0.7),
-              rgba(46, 47, 66, 0.7)
-            ),
-            url(../images/hero/bg-img-desc_@2x.png);
-        }
+          url(../images/hero/bg-img-desc_@2x.jpg);
       }
     }
   }
@@ -780,6 +788,7 @@ body {
   text-decoration: none;
 }
 .footer-text {
+  text-align: start;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -1093,6 +1102,12 @@ body {
   pointer-events: none;
 }
 .modal {
+  width: 95%;
+  max-width: 392px;
+  height: 95%;
+  max-height: 584px;
+  overflow: scroll;
+
   padding-top: 72px;
   padding-left: 24px;
   padding-right: 24px;
@@ -1101,8 +1116,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 392px;
-  min-height: 576px;
+  /* width: 392px; */
+  /* min-height: 576px; */
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
